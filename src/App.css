@@ -12,7 +12,6 @@ img{
   height: 400px;
 }
 img.active{
-  transform: translateX(400px);
 }
 .slider{
   position: relative;
@@ -26,9 +25,17 @@ img.active{
   opacity: 0;
   transition: 3s;
   position: absolute;
+  display: flex;
+  align-items: center;
 }
 .wallpaper.active{
   opacity: 1;
+}
+.wallpaper.active img{
+  transform: translateX(400px);
+}
+.wallpaper.active .text{
+    transform: translateX(-600px);
 }
 #button{
   opacity: 0.2;
@@ -37,9 +44,7 @@ img.active{
 #button:hover{
   opacity: 1;
 }
-div.text.active{
-  transform: translateX(-600px);
-}
+
 .active-banner{
   margin: 20px;
   display: flex;
