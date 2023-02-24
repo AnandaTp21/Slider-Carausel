@@ -11,13 +11,14 @@ img{
   width: 250px;
   height: 400px;
 }
+img.active{
+  transform: translateX(400px);
+}
 .slider{
   position: relative;
   overflow: hidden;
   width: 1200px;
   height: 600px;
-  display: flex;
-  align-items: center;
 }
 .wallpaper{
   width: 1200px;
@@ -25,20 +26,9 @@ img{
   opacity: 0;
   transition: 3s;
   position: absolute;
-  display: flex;
-  align-items: center;
 }
 .wallpaper.active{
   opacity: 1;
-}
-.wallpaper.active .text{
-  transform: translateX(-600px);
-
-}
-.wallpaper.active img{
-  transform: translateX(400px);
-
-
 }
 #button{
   opacity: 0.2;
@@ -47,7 +37,9 @@ img{
 #button:hover{
   opacity: 1;
 }
-
+div.text.active{
+  transform: translateX(-600px);
+}
 .active-banner{
   margin: 20px;
   display: flex;
