@@ -17,11 +17,21 @@ img.active{
 .slider{
   position: relative;
   overflow: hidden;
-  transition: 1s;
+  
   width: 1200px;
   height: 600px;
   display: flex;
   align-items: center;
+}
+.wallpaper{
+  width: 1200px;
+  height: 600px;
+  opacity: 0;
+  transition: 3s;
+  position: absolute;
+}
+.wallpaper.active{
+  opacity: 1;
 }
 #button{
   opacity: 0.2;
