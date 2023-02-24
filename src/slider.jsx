@@ -13,13 +13,9 @@ function Slider() {
       if (i === counter) {
         backup[i] = true;
         const Slider = document.getElementsByClassName("wallpaper");
-        if (counter === 0) {
-          Slider[0].style.background = "linear-gradient(to right ,blue,red)";
-        } else if (counter === 1) {
-          Slider[1].style.background = "linear-gradient(to right ,yellow,green)";
-        } else if (counter === 2) {
-          Slider[2].style.background = "linear-gradient(to right ,black,red)";
-        }
+        Slider[0].style.background = "linear-gradient(to right ,blue,red)";
+        Slider[1].style.background = "linear-gradient(to right ,yellow,green)";
+        Slider[2].style.background = "linear-gradient(to right ,black,red)";
       } else {
         backup[i] = false;
       }
@@ -42,8 +38,8 @@ function Slider() {
           left
         </button>
         <div className="slider">
-          {data.map((data,idx)=>(
-            <div className={`wallpaper ${active[idx] && "active"}`}></div>
+          {active.map((data) => (
+            <div className={`wallpaper ${data && "active"}`}></div>
           ))}
           {data.map((data, idx) => (
             <>
@@ -55,7 +51,7 @@ function Slider() {
                     position: "absolute",
                     left: "-300px",
                     transition: "1s",
-                    zIndex : "2"
+                    zIndex: "2",
                   }}
                 />
               }
@@ -69,7 +65,7 @@ function Slider() {
                 width: "500px",
                 position: "absolute",
                 right: "-500px",
-                zIndex : "2"
+                zIndex: "2",
               }}
             >
               <h1 style={{ marginTop: "0px" }}>{data.title}</h1>
@@ -103,16 +99,17 @@ function Slider() {
         </button>
       </div>
       <div className="active-banner">
-        {active.map((val,idx)=>(
-          <div onClick={()=>{
-            setCounter(idx)
-          }} className={`circle ${val && "active"}`}>
-          </div>
+        {active.map((val, idx) => (
+          <div
+            onClick={() => {
+              setCounter(idx);
+            }}
+            className={`circle ${val && "active"}`}
+          ></div>
         ))}
       </div>
     </>
   );
-
 }
 
 export default Slider;
