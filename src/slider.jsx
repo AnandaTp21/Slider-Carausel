@@ -38,50 +38,43 @@ function Slider() {
           left
         </button>
         <div className="slider">
-          {active.map((data) => (
-            <div className={`wallpaper ${data && "active"}`}></div>
-          ))}
-          {data.map((data, idx) => (
-            <>
-              {
-                <img
-                  src={data.img}
-                  className={`${active[idx] && "active"}`}
-                  style={{
-                    position: "absolute",
-                    left: "-300px",
-                    transition: "1s",
-                    zIndex: "2",
-                  }}
-                />
-              }
-            </>
-          ))}
-          {data.map((data, idx) => (
-            <div
-              className={`${active[idx] && "active"} text`}
-              style={{
-                transition: "1s",
-                width: "500px",
-                position: "absolute",
-                right: "-500px",
-                zIndex: "2",
-              }}
-            >
-              <h1 style={{ marginTop: "0px" }}>{data.title}</h1>
-              <p style={{ textAlign: "left" }}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                veritatis amet cupiditate nulla deserunt provident ipsum
-                blanditiis ut reiciendis. Corporis, reiciendis adipisci
-                recusandae doloribus possimus quo voluptatem debitis voluptate
-                fuga?
-              </p>
-              <p style={{ textAlign: "left" }}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
-                iste aperiam eveniet nulla quaerat minus, accusantium at
-                voluptatibus rerum dolor natus! Alias, dicta. Blanditiis,
-                voluptates iure necessitatibus optio voluptatem expedita?
-              </p>
+          {data.map((data,idx) => (
+            <div className={`wallpaper ${active[idx] && "active"}`}>
+              <img
+                    src={data.img}
+                    style={{
+                      position: "absolute",
+                      left: "-300px",
+                      transition: "1s",
+                      zIndex: "2",
+                    }}
+                  />
+                  <div
+                    className={`text`}
+                    style={{
+                      transition: "1s",
+                      width: "500px",
+                      position: "absolute",
+                      right: "-500px",
+                      zIndex: "2",
+                    }}
+                  >
+                    <h1 style={{ marginTop: "0px" }}>{data.title}</h1>
+                    <p style={{ textAlign: "left" }}>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Animi veritatis amet cupiditate nulla deserunt provident
+                      ipsum blanditiis ut reiciendis. Corporis, reiciendis
+                      adipisci recusandae doloribus possimus quo voluptatem
+                      debitis voluptate fuga?
+                    </p>
+                    <p style={{ textAlign: "left" }}>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Facere, iste aperiam eveniet nulla quaerat minus,
+                      accusantium at voluptatibus rerum dolor natus! Alias,
+                      dicta. Blanditiis, voluptates iure necessitatibus optio
+                      voluptatem expedita?
+                    </p>
+                  </div>
             </div>
           ))}
         </div>
