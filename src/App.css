@@ -4,10 +4,8 @@
   padding: 2rem;
   text-align: center;
 }
-.App{
-  
+.App2{
   display: flex;
-  
 }
 img{
   width: 250px;
@@ -34,4 +32,20 @@ img.active{
 }
 div.text.active{
   transform: translateX(-600px);
+}
+.active-banner{
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+.circle{
+  cursor: pointer;
+  margin-right: 20px;
+  width: 25px;
+  background-color: #213547;
+  height: 25px;
+  border-radius: 25px;
+}
+.circle.active{
+  border: 1px solid white;
 }
