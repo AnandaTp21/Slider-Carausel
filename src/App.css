@@ -11,8 +11,7 @@ img{
   width: 250px;
   height: 400px;
 }
-img.active{
-}
+
 .slider{
   position: relative;
   overflow: hidden;
